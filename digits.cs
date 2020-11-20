@@ -23,14 +23,12 @@ class Digits
             {
                 if (number / 10 == 0)
                     oneDigit++;
+                else if (number / 100 == 0)
+                    twoDigits++;
+                else if (number / 1000 == 0)
+                    threeDigits++;
                 else
-                    if (number / 100 == 0)
-                        twoDigits++;
-                    else
-                        if (number / 1000 == 0)
-                            threeDigits++;
-                        else
-                            moreDigits++;
+                    moreDigits++;
             }
 
             numberText = Console.ReadLine();
